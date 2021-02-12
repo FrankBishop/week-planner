@@ -45,12 +45,21 @@ header > h1 {
   padding: 5px 10px;
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 
-.row {
-
+.addEntryButton > button {
+  cursor: pointer;
 }
+
+/* .row {
+
+} */
 
 form {
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }
