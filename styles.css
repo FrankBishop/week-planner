@@ -73,21 +73,21 @@ header > h1 {
 }
 
 .day-select {
-  position: relative;
+  position: absolute;
   left: 1rem;
 }
 
 .time-select {
-  position: relative;
-  left: 2rem;
+  position: absolute;
+  left: 8rem;
 }
 
 .text-entry {
-  position: relative;
+  position: absolute;
   left: 1rem;
-  top: 2rem;
-  width: 80%;
-  height: 130px;
+  bottom: 3rem;
+  width: 90%;
+  height: 180px;
 }
 
 .modal2 > h1 {
@@ -95,7 +95,7 @@ header > h1 {
 }
 
 .submit-button {
-  position: relative;
+  position: absolute;
   bottom: 1rem;
-  right: 1rem;
+  right: 1.7rem;
 }
