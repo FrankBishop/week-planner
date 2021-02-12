@@ -44,9 +44,9 @@ header > h1 {
   cursor: pointer;
 }
 
-/* .row {
-
-} */
+.row {
+  display: flex;
+}
 
 /* form {
   text-align: center;
@@ -98,4 +98,15 @@ header > h1 {
   position: absolute;
   bottom: 1rem;
   right: 1.7rem;
+}
+
+.one-seventh-column {
+  flex-basis: calc(100% / 7);
+  justify-content: space-around;
+  border: black;
+  border-style: solid;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 4px;
+  margin: 0rem 1rem;
 }

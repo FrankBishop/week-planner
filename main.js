@@ -7,7 +7,8 @@ var timeSelect = document.querySelector('.time-select');
 var textEntry = document.querySelector('.text-entry');
 openButton.addEventListener('click', openModal);
 
-submitButton.addEventListener('click', submitPlan)
+submitButton.addEventListener('click', submitPlan);
+
 
 var data = {
   entries: [],
@@ -16,11 +17,7 @@ var data = {
 };
 
 
-var inputs = {
-  day: daySelect.value,
-  time: timeSelect.value,
-  description: textEntry.value
-};
+var inputs = {};
 
 function openModal(event) {
   modalClassSelector.className = 'background-modal';
@@ -28,5 +25,13 @@ function openModal(event) {
 }
 
 function submitPlan (event) {
+  event.preventDefault();
+
+
+
+  modalClassSelector.className = 'background-modal hidden';
   console.log('it submits');
+  inputs.day = daySelect.value
+  inputs.time = timeSelect.value
+  inputs.description = textEntry.value
 }
