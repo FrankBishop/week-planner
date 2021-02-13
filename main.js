@@ -32,13 +32,10 @@ function submitPlan(event) {
 
   modalClassSelector.className = 'background-modal hidden';
   openButton.className = 'open-button';
-  console.log('it submits');
   inputs.day = daySelect.value;
   inputs.time = timeSelect.value;
   inputs.description = textEntry.value;
-  console.log(inputs)
   data.entries.push(inputs);
-  console.log(data.entries);
 }
 
 $daysOfTheWeek.addEventListener('click', DayEntry);
@@ -48,9 +45,13 @@ function DayEntry(event) {
     if (event.target.textContent === $seventhColumn[i].textContent) {
       var dayText = document.querySelector('.day');
       dayText.textContent = event.target.textContent;
-      $timeInfo.textContent = data.entries[0].time;
-      console.log(data.entries[0].time)
 
+      var j = 0;
+      while ($timeInfo[j].textContent !== data.entries[j].day && j < $seventhColumn.length) {
+        $timeInfo[j].textContent = data.entries[j].time;
+        $descriptionInfo[j].textContent = data.entries[j].description;
+        j++;
+      }
     }
   }
 }
