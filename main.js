@@ -7,6 +7,8 @@ var timeSelect = document.querySelector('.time-select');
 var textEntry = document.querySelector('.text-entry');
 var $daysOfTheWeek = document.querySelector('.row');
 var $seventhColumn = document.querySelectorAll('.one-seventh-column');
+var $timeInfo = document.querySelectorAll('.time');
+var $descriptionInfo = document.querySelectorAll('.description');
 openButton.addEventListener('click', openModal);
 
 submitButton.addEventListener('click', submitPlan);
@@ -34,6 +36,9 @@ function submitPlan(event) {
   inputs.day = daySelect.value;
   inputs.time = timeSelect.value;
   inputs.description = textEntry.value;
+  console.log(inputs)
+  data.entries.push(inputs);
+  console.log(data.entries);
 }
 
 $daysOfTheWeek.addEventListener('click', DayEntry);
@@ -42,7 +47,9 @@ function DayEntry(event) {
   for (var i = 0; i < $seventhColumn.length; i++) {
     if (event.target.textContent === $seventhColumn[i].textContent) {
       var dayText = document.querySelector('.day');
-      dayText.textContent = ' ' + event.target.textContent;
+      dayText.textContent = event.target.textContent;
+      $timeInfo.textContent = data.entries[0].time;
+      console.log(data.entries[0].time)
 
     }
   }
