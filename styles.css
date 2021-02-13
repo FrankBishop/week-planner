@@ -10,7 +10,6 @@ header {
   text-align: center;
 }
 
-
 header > h1 {
   margin: 0;
   padding-top: 20px;
@@ -106,26 +105,57 @@ header > h1 {
   padding: 2rem;
   text-align: center;
   border-radius: 4px;
-  margin: 0rem 1rem;
+  margin: 0 1rem;
 }
 
 h1 {
-  font-family:
+  font-family: ;
 }
 
-.add-entry-row{
+.add-entry-row {
   position: relative;
   text-align: center;
-
 }
+
 .open-button {
   margin-top: 100px;
   border-color: black;
   border-style: solid;
   background-color: white;
-  font-size: 20px
+  font-size: 20px;
 }
 
 .day-container {
   margin-top: 50px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.time {
+  padding-right: 20px;
+  text-align: left;
+}
+
+table {
+  margin-top: 30px;
+  width: 100%;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+th {
+  text-align: left;
+  background-color: rgb(179, 179, 179);
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: lightgray;
 }
