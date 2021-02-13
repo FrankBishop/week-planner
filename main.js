@@ -21,6 +21,7 @@ var inputs = {};
 
 function openModal(event) {
   modalClassSelector.className = 'background-modal';
+  openButton.className = 'hidden'
 
 }
 
@@ -28,6 +29,7 @@ function submitPlan(event) {
   event.preventDefault();
 
   modalClassSelector.className = 'background-modal hidden';
+  openButton.className = 'open-button'
   console.log('it submits');
   inputs.day = daySelect.value;
   inputs.time = timeSelect.value;
@@ -39,9 +41,13 @@ $daysOfTheWeek.addEventListener('click', DayEntry);
 function DayEntry(event) {
 
   for (var i = 0; i < $seventhColumn.length; i++) {
-    if (event.target === $seventhColumn[i]) {
+    if (event.target.value === $seventhColumn[i].value) {
       var daySelector = $seventhColumn[i];
     }
   }
   console.log(daySelector);
 }
+
+
+//when click on day
+//create table

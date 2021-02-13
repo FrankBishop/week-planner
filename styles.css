@@ -10,12 +10,10 @@ header {
   text-align: center;
 }
 
-main {
-  background-color: aquamarine;
-}
 
 header > h1 {
   margin: 0;
+  padding-top: 20px;
 }
 
 .modal {
@@ -26,7 +24,6 @@ header > h1 {
   justify-content: center;
   align-content: center;
   width: 100%;
-  background-color: aquamarine;
 }
 
 .modal > h1 {
@@ -70,6 +67,7 @@ header > h1 {
   height: 350px;
   background-color: seashell;
   margin: 10rem auto;
+  z-index: 1;
 }
 
 .day-select {
@@ -118,7 +116,6 @@ h1 {
 .add-entry-row{
   position: relative;
   text-align: center;
-  background-color: white;
 
 }
 .open-button {
@@ -127,4 +124,8 @@ h1 {
   border-style: solid;
   background-color: white;
   font-size: 20px
+}
+
+.day-container {
+  margin-top: 50px;
 }
