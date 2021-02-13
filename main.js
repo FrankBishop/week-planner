@@ -38,14 +38,16 @@ function submitPlan(event) {
 
 $daysOfTheWeek.addEventListener('click', DayEntry);
 
-function DayEntry(event) {
 
+
+function DayEntry(event) {
   for (var i = 0; i < $seventhColumn.length; i++) {
-    if (event.target.value === $seventhColumn[i].value) {
-      var daySelector = $seventhColumn[i];
+
+    if (event.target.textContent === $seventhColumn[i].textContent) {
+      console.log(i)
+      console.log($seventhColumn[i]);
     }
   }
-  console.log(daySelector);
 }
 
 
