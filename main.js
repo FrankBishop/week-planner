@@ -41,7 +41,9 @@ $daysOfTheWeek.addEventListener('click', DayEntry);
 function DayEntry(event) {
   for (var i = 0; i < $seventhColumn.length; i++) {
     if (event.target.textContent === $seventhColumn[i].textContent) {
-      console.log('WIP');
+      var dayText = document.querySelector('.day');
+      dayText.textContent = ' ' + event.target.textContent;
+
     }
   }
 }
